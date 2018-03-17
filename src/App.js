@@ -9,8 +9,6 @@ import './App.css'
 
 class App extends Component {
   render() {
-
-
     return (
       <div className="App">
         <nav className="navbar pure-menu pure-menu-horizontal">

@@ -33,6 +33,8 @@ ReactDOM.render((
         <Route path="/vivo-social" component={App}>
           <IndexRoute component={Home} />
           <Route path="/" component={Cadastro} />
+          <Route path="/cadastro" component={Cadastro} />
+          <Route path="/doar" component={Doar} />
           <Route path="dashboard" component={Dashboard} />
         </Route>
       </Router>
