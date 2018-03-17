@@ -22,11 +22,11 @@ class Home extends Component {
         <div style={{clear:'both'}} />
         <br />
         <div style={{float: 'left'}}>
-          <button style={btnStyle}>
-            <Link to="/doar" className="pure-menu-heading pure-menu-link">Doar</Link>
+          <button className="btn btn-default" style={btnStyle}>
+            <Link to="/cadastro">Cadastar</Link>
           </button>
-          <button style={btnStyle}>
-            <Link to="/cadastro" className="pure-menu-heading pure-menu-link">Cadastar</Link>
+          <button className="btn btn-primary" style={btnStyle}>
+            <Link to="/doar" style={{color: 'white'}}>Doar</Link>
           </button>
           <div style={{clear:'both'}} />
           <br />
