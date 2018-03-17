@@ -595,7 +595,7 @@
 						<li id="aVivoPrincipalBook" rel="a_vivo">
 							<span class="marca_menu_left"></span>
 							<a href="vivo-social" title="Vivo social" id="menuFocoAVivo">
-								Vivo social
+								VIVO SOCIAL
 							</a>
 							<span class="marca_menu_right"></span>
 						</li>
@@ -765,70 +765,11 @@ function lookupNameByTagId(id, tag)
 									
 									<!--Menu Vivo -->
 									<div class="geral_login">
-										<!--Login email-->
-										<div class="login">
-											<div class="title">MEU VIVO</div>
-											<div class="campos_login">
-												<div class="form_login">
-												
-													<form id="loginConvergenteForm" method="post" action="https://login.vivo.com.br/loginmarca/appmanager/marca/publico?_st=&_windowLabel=acesso_2&acesso_2_actionOverride=%2Fbr%2Fcom%2Fvivo%2Fmarca%2Fportlets%2Flogin%2FdoLoginConvergente&portal=true">
-														<div id="input_user1" class="campo_login">
-															<!-- mensagem de erro-->
-															<div id="msn_erro_email" style="display:none">
-																<div class="br_esq_erro"></div>
-																<div class="bg_msn_erro">
-																	<div class="txt_msn_erro"></div>
-																</div>
-																<div class="br_dir_erro"><a href="javascript:void(0);" class="x_msn_errro"></a></div>
-															</div>
-															<!--final erro-->
-															<input type="text" class="input_login_cpf autocomplete" name="cpfOuEmail" style="width: 90px;" id="cpfOuEmail" autocomplete="off" title="Meu Vivo - Digite seu CPF ou e-mail" alt="Meu Vivo - Digite seu CPF ou e-mail">
-															<a href="index.html#" id="ajuda_cpfEmail" class="ajuda" title="Ajuda" onclick="return false;"></a>
-															<div class="balao_ajuda_cpfEmail" >Agora você também pode acessar o Meu Vivo com o seu CPF.</div>
-														</div>
-														<div id="input_senha1" class="campo_login_senha" >
-															<!-- mensagem de erro-->
-															<div id="msn_erro_senha" style="display:none">
-																<div class="br_esq_erro"></div>
-																<div class="bg_msn_erro">
-																	<div class="txt_msn_erro"></div>
-																</div>
-																<div class="br_dir_erro"><a href="javascript:void(0);" class="x_msn_errro"></a></div>
-															</div>
-															<!--final erro-->
-															<input type="password" class="input_senha autocomplete" style="display:none;" name="senha" id="senhaHeader" title="Digite sua senha" alt="Digite sua senha">
-															<input type="text" class="input_senha autocomplete" name="senhaText" id="senhaText" value="Senha" title="Digite sua senha" alt="Digite sua senha">
-															<a href="index.html#" id="ajuda_senha" class="ajuda" title="Ajuda" style="margin-right:25px;" onclick="return false;"></a>
-															<div class="balao_ajuda_senha">Lembre-se, sua senha é composta por 6 caracteres numéricos. </div>
-														</div>
-														<input type="button" name="btnEntrar" id="btnEntrar" onclick="validarFormHeader(false);" class="bt_login" title="Entrar no Meu Vivo" alt="Entrar no Meu Vivo" value=" ">
-													</form>
-												</div>
-												<!--Links esquecimento-->
-												<div class="recupera">
-													
-													
-													
-													
-													<a href="javascript:void(0);" onclick="redirectRecuperacaoAcesso('email', false);" title="Recuperar o seu e-mail de acesso" alt="Recuperar o seu e-mail de acesso">Esqueci meu e-mail</a>
-													<a href="javascript:void(0);" onclick="redirectRecuperacaoAcesso('senha', false);" title="Recuperar sua senha" alt="Recuperar sua senha">Esqueci minha senha</a>
-												</div>
-											</div>
-										</div>
+										
 										<!-- cadastro -->
 										<div class="cadastro">
 											
-											<a href="https://login.vivo.com.br/loginmarca/appmanager/marca/publico?_nfpb=true&amp;_nfpb=true&amp;_st=&amp;_pageLabel=pages_publico_primeiroAcesso_page&amp;_nfls=false&amp;acesso=paravoce" class="cadastre_se" title="Cadastrar">Cadastre-se</a>
-											<!--Login  Face-->
-											
-												<a href="index.html#" class="login_face" title="Logar no Meu Vivo com seu facebook" onClick="fbLogin();">Login via Facebook</a>
-											
-											
-												
-												<div class="loginMobileConnect" title="Login via Mobile Connect">												
-													<a href="index.html#" id="loginMConnect" class="loginMConnect" title="Login via Mobile Connect">Login via Mobile Connect</a>
-												</div>
-											
+											<h1> Vindo Julia Lopes.</h1>
 										</div>										
 									</div>							
 									
@@ -1948,35 +1889,7 @@ if(html8.indexOf('<ul></ul>') == -1){     $(document).ready(function(){$('#col_m
 		}
 		
 	
-	if(window.changeTipoLogin!=undefined){
-		window.changeTipoLogin = function changeTipoLogin(tipo){
-			if(tipo=='pj'){
-				$('#acesso_terminal').remove();
-				$('#acesso_cpf').remove();
-				if ($('#box_acesso_terminal').length) {
-					$('#box_acesso_terminal').remove();
-				}
-				setTipoLogin('email');
-			}else if(tipo=='terminal'){
-				$('#acesso_terminal').hide();
-				$('#acesso_cpf').show();
-				if ($('#box_acesso_terminal').length) {
-					$('#box_acesso_terminal').show();
-				}
-				$('#rd_login_email').attr('checked',true);
-				setTipoLogin('email');
-			}else{
-				$('#acesso_terminal').show();
-				$('#acesso_cpf').hide();
-				if ($('#box_acesso_terminal').length) {
-					$('#box_acesso_terminal').hide();
-				}
-				$('#rd_login_email').attr('checked',false);
-				$('#rd_login_terminal').attr('checked',false);
-				setTipoLogin('cpf');
-			}
-		}
-	}
+	
 	
 </script>
 <div class="rodape_rev">	
