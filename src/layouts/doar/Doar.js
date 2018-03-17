@@ -105,17 +105,17 @@ const imgStyle = {
 class Doar extends Component {
 
   handleDonate() {
+    let { web3 } = this.props
+
     if(this.state==null || this.state.pessoa == null) {
       alert("Voce precisa selecionar uma pessoa.");
     } else {
       console.log("Enviando dados para a blockchain com Web3...")
     }
-  }
-  
-  componentDidMount() {
-    console.log(this.props)
-    let { web3 } = this.props
-    web3.eth.getAccounts(console.log)
+
+    if(web3 !== null) {
+      web3.eth.getAccounts(console.log)
+    }
   }
 
   render() {
