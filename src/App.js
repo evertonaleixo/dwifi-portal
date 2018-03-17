@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { HiddenOnlyAuth, VisibleOnlyAuth } from './util/wrappers.js'
 
-// UI Components
-import LoginButtonContainer from './user/ui/loginbutton/LoginButtonContainer'
-import LogoutButtonContainer from './user/ui/logoutbutton/LogoutButtonContainer'
-
 // Styles
 import './css/oswald.css'
 import './css/open-sans.css'
@@ -19,7 +15,6 @@ class App extends Component {
         <li className="pure-menu-item">
           <Link to="/dashboard" className="pure-menu-link">Dashboard</Link>
         </li>
-        <LogoutButtonContainer />
       </span>
     )
 
@@ -27,9 +22,6 @@ class App extends Component {
       <div>
         <span className={"pure-menu-item"}>
           <li> <a> Wallet: </a><input /> </li> 
-        </span>
-        <span>
-          <LoginButtonContainer />
         </span>
       </div>
     )
