@@ -41,9 +41,8 @@ class App extends Component {
             <OnlyGuestLinks />
             <OnlyAuthLinks />
           </ul>
-          <Link to="/" className="pure-menu-heading pure-menu-link">D - W I F I</Link>
+          <Link to="/" className="pure-menu-heading pure-menu-link">Vivo Social</Link>
         </nav>
-
         {this.props.children}
       </div>
     );
