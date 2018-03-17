@@ -10,6 +10,7 @@ import getWeb3 from './util/web3/getWeb3'
 import App from './App'
 import Home from './layouts/home/Home'
 import Dashboard from './layouts/dashboard/Dashboard'
+import Cadastro from './layouts/cadastro/Cadastro'
 
 // Redux Store
 import store from './store'
@@ -31,8 +32,8 @@ ReactDOM.render((
       <Router history={history}>
         <Route path="/vivo-social" component={App}>
           <IndexRoute component={Home} />
-          <Route path="/" component={UserIsAuthenticated(App)} />
-          <Route path="dashboard" component={UserIsAuthenticated(Dashboard)} />
+          <Route path="/" component={Cadastro} />
+          <Route path="dashboard" component={Dashboard} />
         </Route>
       </Router>
     </Provider>
