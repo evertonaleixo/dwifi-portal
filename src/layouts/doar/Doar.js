@@ -126,11 +126,29 @@ class Doar extends Component {
 
         this.setState({contract: contract});
 
-        // Set the provider for our contract
-        //App.contracts.Adoption.setProvider(App.web3Provider);
+        web3.eth.getAccounts(function(error, accounts) {
+          if (error) {
+              console.log(error);
+          }
 
-        // Use our contract to retrieve and mark the adopted pets
-        //return App.markAdopted();
+          var account = accounts[0];
+          console.log(account);
+
+          contract.deployed().then(function(instance) {
+              let dwifiInstance = instance;
+              console.log('dwifiInstance ', dwifiInstance)
+
+              let resp = dwifiInstance.balanceOf('0xCc06d32dD07A3e5ABE549e3E01BF2D069a8c10cE');
+              // Execute adopt as a transaction by sending account
+              console.log(resp)
+              return resp;
+          }).then(function(result) {
+              console.log(result);
+              return result;
+          }).catch(function(err) {
+              console.log(err.message);
+          });
+      });
       });
 
     }
