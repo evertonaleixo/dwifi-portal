@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 const states = [
   "Acre",
@@ -111,6 +112,11 @@ class Doar extends Component {
     }
   }
   
+  componentDidMount() {
+    let { web3 } = this.props
+    web3.eth.getAccounts().then(console.log)
+  }
+
   render() {
     let pessoasNome = ["Selecione", ...pessoas.map(x => x.nome)];
     let pessoa = null;
@@ -173,4 +179,8 @@ class Doar extends Component {
   }
 }
 
-export default Doar
+const mapStateToProps = state => ({
+  web3: state
+})
+
+export default connect(mapStateToProps)(Doar)

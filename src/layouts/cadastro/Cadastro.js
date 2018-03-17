@@ -5,6 +5,7 @@ const containerStyle = {
 }
 
 class Cadastro extends Component {
+
   render() {
     return(
       <main className="container" style={containerStyle} >
@@ -46,14 +47,9 @@ class Cadastro extends Component {
         </div>
 
         <div className="row">
-          <div className="col-xs-6 form-group">
-            <label>Renda Familiar </label>
-              <input type="text" className="form-control"/>
-          </div>
-
-          <div className="col-xs-6 form-group">
-            <label>Profissão </label>
-              <input type="text" className="form-control"/>
+          <div className="col-xs-12 form-group">
+            <label>História </label>
+              <textarea className="form-control" rows='10'/>
           </div>
         </div>
 
@@ -68,4 +64,4 @@ class Cadastro extends Component {
   }
 }
 
-export default Cadastro
+
