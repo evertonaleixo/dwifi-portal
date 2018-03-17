@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import TruffleContract from 'truffle-contract'
 
 const states = [
   "Acre",
@@ -114,7 +115,24 @@ class Doar extends Component {
     }
 
     if(web3 !== null) {
-      web3.eth.getAccounts(console.log)
+      web3.eth.getAccounts(console.log);
+
+      fetch('Dwifi.json').then((data)=> {
+        // Get the necessary contract artifact file and instantiate it with truffle-contract
+        var dwifi = data;
+        let contract = TruffleContract(dwifi);
+        contract.setProvider(web3.currentProvider);
+        console.log(contract)
+
+        this.setState({contract: contract});
+
+        // Set the provider for our contract
+        //App.contracts.Adoption.setProvider(App.web3Provider);
+
+        // Use our contract to retrieve and mark the adopted pets
+        //return App.markAdopted();
+      });
+
     }
   }
 
