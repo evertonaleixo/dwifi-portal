@@ -1,17 +1,38 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
+
+const btnStyle = {
+  margin: '15px'
+};
 
 class Home extends Component {
+  
   render() {
+    
+
     return(
       <main className="container">
         <div className="pure-g">
           <div className="pure-u-1-1">
             <h1>Bem vindo ao D-wifi!</h1>
-            <p>A D-wifi é ferramenta que vai lhe permitir viajar constantemente sem se preocupar com a falta de infra estrutura para internet.</p>
-
-            <p>Para começar a navegar, acesse <b>login</b> e insira sua wallet. </p>
-
-            <p>Será debitado de sua wallet uma taxa de k Ethers para cada M Mb utilizado. </p>
+            <p>A D-wifi é ferramenta que vai lhe permitir doar créditos para pessoas de baixa renda. Ajude a levar a internet para todos doando o que não gastar do seu!</p>
+          </div>
+        </div>
+        
+        <div style={{clear:'both'}} />
+        <br />
+        <div style={{float: 'left'}}>
+          <button style={btnStyle}>
+            <Link to="/doar" className="pure-menu-heading pure-menu-link">Doar</Link>
+          </button>
+          <button style={btnStyle}>
+            <Link to="/cadastro" className="pure-menu-heading pure-menu-link">Cadastar</Link>
+          </button>
+          <div style={{clear:'both'}} />
+          <br />
+          
+          <div>
+            {this.props.children}
           </div>
         </div>
       </main>
