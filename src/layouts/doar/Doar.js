@@ -102,6 +102,14 @@ const imgStyle = {
 };
 
 class Doar extends Component {
+
+  handleDonate() {
+    if(this.state==null || this.state.pessoa == null) {
+      alert("Voce precisa selecionar uma pessoa.");
+    } else {
+      console.log("Enviando dados para a blockchain com Web3...")
+    }
+  }
   
   render() {
     let pessoasNome = ["Selecione", ...pessoas.map(x => x.nome)];
@@ -157,7 +165,7 @@ class Doar extends Component {
         
         
         <div className="form-group">
-          <button className="btn btn-success" > DOAR </button>
+          <button className="btn btn-success" onClick={() => this.handleDonate()}> DOAR </button>
         </div>
 
       </main>
