@@ -113,8 +113,9 @@ class Doar extends Component {
   }
   
   componentDidMount() {
+    console.log(this.props)
     let { web3 } = this.props
-    web3.eth.getAccounts().then(console.log)
+    web3.eth.getAccounts(console.log)
   }
 
   render() {
@@ -180,7 +181,7 @@ class Doar extends Component {
 }
 
 const mapStateToProps = state => ({
-  web3: state
+  web3: state.web3.web3Instance
 })
 
 export default connect(mapStateToProps)(Doar)
