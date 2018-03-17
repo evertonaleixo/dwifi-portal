@@ -24,9 +24,6 @@ export function loginUser() {
       authentication.setProvider(web3.currentProvider)
 
       // Declaring this for later so we can chain functions on Authentication.
-      var authenticationInstance
-      console.log(2)
-
       var userName = 'Usuario';//web3.toUtf8(result);
 
       dispatch(userLoggedIn({"name": userName}));
