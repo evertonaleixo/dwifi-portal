@@ -12,6 +12,9 @@ contract Dwifi is EIP20Interface {
     mapping (address => uint256) public balances;
     mapping (address => mapping (address => uint256)) public allowed;
     mapping (address => mapping (address => uint256)) public transactions;
+    mapping (address => mapping (uint => address)) public addressDonated;
+    mapping (address => uint) public addressDonatedCount;
+
     /*
     NOTE:
     The following variables are OPTIONAL vanities. One does not have to include them.
@@ -40,13 +43,26 @@ contract Dwifi is EIP20Interface {
         balances[msg.sender] -= _value;
         balances[_to] += _value;
         Transfer(msg.sender, _to, _value);
+        
+        transactions[msg.sender][_to] = transactions[msg.sender][_to] + _value;
+        
+        addressDonated[msg.sender][addressDonatedCount[msg.sender]] = _to;
+        addressDonatedCount[msg.sender] = addressDonatedCount[msg.sender] + 1;
+
         return true;
     }
 
-    // function getTransactions(address addr) public view returns (mapping (address => uint256) transactionss) {
+    function getTransactionFrom(address dest) public view returns (uint256) {
+        return transactions[msg.sender][dest];
+    }
 
-    //     return transactions[addr];
-    // }
+    function getDonated(uint256 _id) public view returns (address) {
+        return addressDonated[msg.sender][_id];
+    }
+
+    function getDonatedCount() public view returns (uint256) {
+        return addressDonatedCount[msg.sender];
+    }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
         uint256 allowance = allowed[_from][msg.sender];
