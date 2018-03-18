@@ -9,6 +9,7 @@ module.exports = function(deployer) {
   deployer.link(Ownable, Killable);
   deployer.deploy(Killable);
   deployer.link(Killable, Authentication);
+  console.log(111, deployer)
+  //deployer.deploy(EIP20Interface);
   deployer.deploy(Dwifi, 10000, "angel-chain", 0, "ACN");
-  deployer.deploy(EIP20Interface);
 };
