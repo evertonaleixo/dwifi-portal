@@ -1,17 +1,23 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+const userActive = {
+  backgroundColor: "red"
+}
+
 class Usuarios extends Component {
 
   handleClick(person) {
-    console.log(person);
-    this.setState()
+    this.props.selected = person;
   }
 
   renderPeople(person, n) {
     return(
       <div className="col-md-3" key={n} >
-        <div className="thumbnail" onClick={() => this.handleClick(person)}>
+        <div className="thumbnail" 
+          onClick={() => this.handleClick(person)}
+          style={person.active ? userActive : {}}>
+
           <img src={`/images/pessoa${n+1}.png`} className="img-thumbnail"/>
           <div className="caption">
             <span className="h3" style={{textAlign: "center"}}><b>{person.nome}</b></span>
@@ -23,8 +29,8 @@ class Usuarios extends Component {
   }
   
   render() {
-
-    const { pessoas } = this.props;
+    var { pessoas } = this.state
+    pessoas = pessoas || this.props.pessoas
 
     return(
       <main className="container">
