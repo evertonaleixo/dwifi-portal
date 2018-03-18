@@ -3,13 +3,8 @@ module.exports = {
     development: {
       host: "localhost",
       port: 9545,
+      gas:   7721975,
       network_id: "*" // Match any network id
-    },
-    ropsten:  {
-      network_id: 3,
-      host: "localhost",
-      port:  8545,
-      gas:   2900000
     }
   }
 };
