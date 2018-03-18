@@ -14,7 +14,7 @@ class Usuarios extends Component {
     let n = confirm("Deseja confirmar a doação?")
     if(n) {
       console.log('sdasdas')
-      this.handleDonate()
+      this.handleDonate(0xf17f52151ebef6c7334fad080c5704d77216b732)
     }
   }
 
