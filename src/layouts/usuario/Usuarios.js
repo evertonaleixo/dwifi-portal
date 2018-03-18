@@ -12,9 +12,9 @@ class Usuarios extends Component {
 
   handleClick(person) {
     let n = confirm("Deseja confirmar a doação?")
+    
     if(n) {
-      console.log('sdasdas')
-      this.handleDonate(0xf17f52151ebef6c7334fad080c5704d77216b732)
+      this.handleDonate(person.wallet)
     }
   }
 
@@ -48,7 +48,9 @@ class Usuarios extends Component {
             console.log('dwifiInstance ', dwifiInstance.transfer.call)
 
             let resp = dwifiInstance.transfer(wallet , 1, {from: account})
-              .then((x) => console.log(x));
+              .then((x) => {
+                window.location = '/dashboard';
+              });
             // Execute adopt as a transaction by sending account
             return resp;
         }).then(function(result) {
@@ -94,7 +96,8 @@ class Usuarios extends Component {
 
 const mapStateToProps = state => ({
   pessoas: state.usuarioReducer.pessoas,
-  web3: state.web3.web3Instance
+  web3: state.web3.web3Instance,
+  router: state.routing
 })
 
 export default connect(mapStateToProps)(Usuarios)
