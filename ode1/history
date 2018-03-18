@@ -1,0 +1,3 @@
+admin.nodeInfo
+eth.getGasPrice()
+miner.start()

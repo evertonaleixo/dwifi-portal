@@ -30,12 +30,10 @@ getWeb3
 ReactDOM.render((
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={Home}>
-          
-          <Route path="/cadastro" component={Cadastro} />
-          <Route path="/doar" component={Doar} />
-          <Route path="dashboard" component={Dashboard} />
-        </Route>
+        <Route path="/" component={Home} />
+        <Route path="cadastro" component={Cadastro} />
+        <Route path="doar" component={Doar} />
+        <Route path="dashboard" component={Dashboard} />
       </Router>
     </Provider>
   ),

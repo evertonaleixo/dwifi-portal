@@ -14,26 +14,37 @@ class Home extends Component {
       <main className="container">
         <div className="pure-g">
           <div className="pure-u-1-1">
-            <h1>Bem vindo ao D-wifi!</h1>
-            <p>A D-wifi é ferramenta que vai lhe permitir doar créditos para pessoas de baixa renda. Ajude a levar a internet para todos doando o que não gastar do seu!</p>
+            <h1>Bem vindo a Vivo Social!</h1>
+            <p className="h4">A Vivo social é uma ferramena desenvolvida com tecnologia Angel Chain</p>
           </div>
         </div>
-        
         <div style={{clear:'both'}} />
         <br />
         <div style={{float: 'left'}}>
-          <button className="btn btn-default" style={btnStyle}>
-            <Link to="/cadastro">Cadastar</Link>
-          </button>
-          <button className="btn btn-primary" style={btnStyle}>
-            <Link to="/doar" style={{color: 'white'}}>Doar</Link>
-          </button>
+          <div className="row">
+            <div className="col-xs-6">
+              <Link to="/cadastro">
+                <div className="thumbnail">
+                  <img src="/images/senior.jpg" className="img-thumbnail"/>
+                  <div className="caption">
+                    <span className="h3" style={{textAlign: "center"}}><b>Cadastrar-se</b></span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-xs-6">
+              <Link to="/doar" style={{color: 'white'}}>
+                <div className="thumbnail">
+                  <img src="/images/donate.jpg" className="img-thumbnail"/>
+                  <div className="caption">
+                    <span className="h3" style={{textAlign: "center"}}><b>Doar</b></span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
           <div style={{clear:'both'}} />
           <br />
-          
-          <div>
-            {this.props.children}
-          </div>
         </div>
       </main>
     )

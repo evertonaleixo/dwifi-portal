@@ -1,0 +1,32 @@
+INFO [03-17|22:50:07] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [03-17|22:50:07] Starting peer-to-peer node               instance=Geth/v1.8.2-stable-b8b9f7f4/linux-amd64/go1.10
+INFO [03-17|22:50:07] Allocated cache and file handles         database=/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/ode1/geth/chaindata cache=768 handles=512
+INFO [03-17|22:50:07] Writing default main-net genesis block 
+INFO [03-17|22:50:07] Persisted trie from memory database      nodes=12356 size=2.34mB time=37.121089ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [03-17|22:50:07] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: <nil> Engine: ethash}"
+INFO [03-17|22:50:07] Disk storage enabled for ethash caches   dir=/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/ode1/geth/ethash count=3
+INFO [03-17|22:50:07] Disk storage enabled for ethash DAGs     dir=/home/brunocroh/.ethash                                                   count=2
+INFO [03-17|22:50:07] Initialising Ethereum protocol           versions="[63 62]" network=1
+INFO [03-17|22:50:07] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184
+INFO [03-17|22:50:07] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184
+INFO [03-17|22:50:07] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184
+INFO [03-17|22:50:07] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [03-17|22:50:07] Starting P2P networking 
+INFO [03-17|22:50:09] UDP listener up                          self=enode://dc9e0f6202ed7cd6f2f22c2a794683f92150e83826931a5823a0bacada15415a26b4bca6c3760b6f4e584eb21eb1dc80256dc6b63430adc0c4c6a6c2873f4d29@[::]:30303
+INFO [03-17|22:50:09] RLPx listener up                         self=enode://dc9e0f6202ed7cd6f2f22c2a794683f92150e83826931a5823a0bacada15415a26b4bca6c3760b6f4e584eb21eb1dc80256dc6b63430adc0c4c6a6c2873f4d29@[::]:30303
+INFO [03-17|22:50:09] IPC endpoint opened                      url=/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/ode1/geth.ipc
+INFO [03-17|22:50:09] HTTP endpoint opened                     url=http://127.0.0.1:8545                                                  cors=http://localhost:8000 vhosts=localhost
+WARN [03-17|22:50:15] System clock seems off by 2m14.02603829s, which can prevent network connectivity 
+WARN [03-17|22:50:15] Please enable network time synchronisation in system settings. 
+WARN [03-17|23:00:26] System clock seems off by 2m13.995054801s, which can prevent network connectivity 
+WARN [03-17|23:00:26] Please enable network time synchronisation in system settings. 
+INFO [03-17|23:03:46] Updated mining threads                   threads=0
+INFO [03-17|23:03:46] Transaction pool price threshold updated price=18000000000
+ERROR[03-17|23:03:46] Cannot start mining without etherbase    err="etherbase must be explicitly specified"
+INFO [03-17|23:06:06] HTTP endpoint closed                     url=http://127.0.0.1:8545
+INFO [03-17|23:06:06] IPC endpoint closed                      endpoint=/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/ode1/geth.ipc
+INFO [03-17|23:06:06] Blockchain manager stopped 
+INFO [03-17|23:06:06] Stopping Ethereum protocol 
+INFO [03-17|23:06:06] Ethereum protocol stopped 
+INFO [03-17|23:06:06] Transaction pool stopped 
+INFO [03-17|23:06:06] Database closed                          database=/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/ode1/geth/chaindata

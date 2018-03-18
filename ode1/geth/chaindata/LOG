@@ -1,0 +1,8 @@
+=============== Mar 17, 2018 (-03) ===============
+22:50:07.181719 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:50:07.256329 db@open opening
+22:50:07.261643 version@stat F·[] S·0B[] Sc·[]
+22:50:07.301260 db@janitor F·2 G·0
+22:50:07.301348 db@open done T·44.950244ms
+23:06:06.347579 db@close closing
+23:06:06.347750 db@close done T·161.736µs

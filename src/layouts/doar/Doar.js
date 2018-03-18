@@ -7044,50 +7044,60 @@ class Doar extends Component {
     return(
       <main className="container">
 
-        <div className="form-group">
-          <label for="valor">Quantos MB deseja doar:</label>
+        <div className="row">
+          <div className="">
+            <div className="col-xs-3">
+              <label for="valor">Quantos MB deseja doar:</label>
+              
+              <select className="form-control" id="quantidade">
+                {['100 MB','500 MB','1000 MB'].map(quantidade => <option>{quantidade}</option>)}
+              </select>
+            </div>
+          </div>
           
-          <select className="form-control" id="quantidade">
-            {['100 MB','500 MB','1000 MB'].map(quantidade => <option>{quantidade}</option>)}
-          </select>
-        </div>
-        
-        <div className="form-group">
-          <label for="state">Estado:</label>
-          <select className="form-control" id="state">
-            {states.map(state => <option>{state}</option>)}
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label for="pessoa">Pessoa:</label>
-          <select className="form-control" id="pessoa" onChange={(x) => {
-              let nome = x.target.value;
-
-              var p = pessoas.filter(x => x.nome == nome);
-              if(p.length == 0)
-                this.setState({pessoa: null});
-              else
-                this.setState({pessoa: p[0]});
-            }
-            }>
-            {pessoasNome.map(pessoa => <option>{pessoa}</option>)}
-          </select>
-        </div>
-
-        {pessoa ? 
-        <div className="row"> 
-          <div className="col-xs-3">
-            <img style={imgStyle} src={pessoa.foto} />
+          <div className="">
+            <div className="col-xs-3">
+              <label for="state">Estado:</label>
+              <select className="form-control" id="state">
+                {states.map(state => <option>{state}</option>)}
+              </select>
+            </div>
           </div>
-          <div className="col-xs-7 h3">
-            <p> {pessoa.historia} </p>
+          <div className="">
+            <div className="col-xs-3">
+              <label for="pessoa">Pessoa:</label>
+              <select className="form-control" id="pessoa" onChange={(x) => {
+                  let nome = x.target.value;
+                  let p = pessoas.filter(x => x.nome === nome);
+                  if(p.length == 0)
+                    this.setState({pessoa: null});
+                  else
+                    this.setState({pessoa: p[0]});
+                }
+                }>
+                {pessoasNome.map(pessoa => <option>{pessoa}</option>)}
+              </select>
+            </div>
           </div>
-        </div>: <div />}
+        </div>
+
+        <br/>
+  
+          {pessoa ? 
+          <div className="row form-group"> 
+            <div className="col-xs-3">
+              <img style={imgStyle} src={pessoa.foto} />
+            </div>
+            <div className="col-xs-7 h3">
+              <p> {pessoa.historia} </p>
+            </div>
+          </div>: <div />}
         
         
-        <div className="form-group">
-          <button className="btn btn-success" onClick={() => this.handleDonate()}> DOAR </button>
+        <div className="row">
+          <div className="form-group">
+            <button className="btn btn-success" onClick={() => this.handleDonate()}> DOAR </button>
+          </div>
         </div>
 
       </main>
