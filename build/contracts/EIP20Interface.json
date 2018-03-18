@@ -180,9 +180,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// Abstract contract for the full ERC 20 Token standard\n// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md\npragma solidity ^0.4.2;\n\n\ncontract EIP20Interface {\n    /* This is a slight change to the ERC20 base standard.\n    function totalSupply() constant returns (uint256 supply);\n    is replaced with:\n    uint256 public totalSupply;\n    This automatically creates a getter function for the totalSupply.\n    This is moved to the base contract since public getter functions are not\n    currently recognised as an implementation of the matching abstract\n    function by the compiler.\n    */\n    /// total amount of tokens\n    uint256 public totalSupply;\n\n    /// @param _owner The address from which the balance will be retrieved\n    /// @return The balance\n    function balanceOf(address _owner) public view returns (uint256 balance);\n\n    /// @notice send `_value` token to `_to` from `msg.sender`\n    /// @param _to The address of the recipient\n    /// @param _value The amount of token to be transferred\n    /// @return Whether the transfer was successful or not\n    function transfer(address _to, uint256 _value) public returns (bool success);\n\n    /// @notice send `_value` token to `_to` from `_from` on the condition it is approved by `_from`\n    /// @param _from The address of the sender\n    /// @param _to The address of the recipient\n    /// @param _value The amount of token to be transferred\n    /// @return Whether the transfer was successful or not\n    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success);\n\n    /// @notice `msg.sender` approves `_spender` to spend `_value` tokens\n    /// @param _spender The address of the account able to transfer the tokens\n    /// @param _value The amount of tokens to be approved for transfer\n    /// @return Whether the approval was successful or not\n    function approve(address _spender, uint256 _value) public returns (bool success);\n\n    /// @param _owner The address of the account owning tokens\n    /// @param _spender The address of the account able to transfer the tokens\n    /// @return Amount of remaining tokens allowed to spent\n    function allowance(address _owner, address _spender) public view returns (uint256 remaining);\n\n    // solhint-disable-next-line no-simple-event-func-name  \n    event Transfer(address indexed _from, address indexed _to, uint256 _value); \n    event Approval(address indexed _owner, address indexed _spender, uint256 _value);\n}",
-  "sourcePath": "/home/everton/hackthon/dwifi-auth/contracts/EIP20Interface.sol",
+  "sourcePath": "/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/contracts/EIP20Interface.sol",
   "ast": {
-    "absolutePath": "/home/everton/hackthon/dwifi-auth/contracts/EIP20Interface.sol",
+    "absolutePath": "/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/contracts/EIP20Interface.sol",
     "exportedSymbols": {
       "EIP20Interface": [
         464
@@ -979,7 +979,7 @@
     "src": "119:2358:2"
   },
   "legacyAST": {
-    "absolutePath": "/home/everton/hackthon/dwifi-auth/contracts/EIP20Interface.sol",
+    "absolutePath": "/home/brunocroh/Documents/Projetos/hackthon/dwifi-portal/contracts/EIP20Interface.sol",
     "exportedSymbols": {
       "EIP20Interface": [
         464
@@ -1781,5 +1781,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-17T21:41:10.789Z"
+  "updatedAt": "2018-03-18T13:25:11.755Z"
 }
