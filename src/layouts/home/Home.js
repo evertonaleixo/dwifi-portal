@@ -15,7 +15,9 @@ class Home extends Component {
         <div className="pure-g">
           <div className="pure-u-1-1">
             <h1>Bem vindo a Vivo Social!</h1>
-            <p className="h4">A Vivo social é uma ferramena desenvolvida com tecnologia Angel Chain</p>
+            <p className="h4">A Vivo social é uma ferramena desenvolvida com tecnologia Angel Chain,
+              onde qualquer pessoa consegue transformar seus dados de acesso a
+              internet não utilizados, em doações</p>
           </div>
         </div>
         <div style={{clear:'both'}} />

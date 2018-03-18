@@ -7046,7 +7046,7 @@ class Doar extends Component {
 
         <div className="row">
           <div className="">
-            <div className="col-xs-3">
+            <div className="col-xs-4">
               <label for="valor">Quantos MB deseja doar:</label>
               
               <select className="form-control" id="quantidade">
@@ -7056,7 +7056,7 @@ class Doar extends Component {
           </div>
           
           <div className="">
-            <div className="col-xs-3">
+            <div className="col-xs-4">
               <label for="state">Estado:</label>
               <select className="form-control" id="state">
                 {states.map(state => <option>{state}</option>)}
@@ -7064,7 +7064,7 @@ class Doar extends Component {
             </div>
           </div>
           <div className="">
-            <div className="col-xs-3">
+            <div className="col-xs-4">
               <label for="pessoa">Pessoa:</label>
               <select className="form-control" id="pessoa" onChange={(x) => {
                   let nome = x.target.value;
@@ -7073,8 +7073,7 @@ class Doar extends Component {
                     this.setState({pessoa: null});
                   else
                     this.setState({pessoa: p[0]});
-                }
-                }>
+                }}>
                 {pessoasNome.map(pessoa => <option>{pessoa}</option>)}
               </select>
             </div>
@@ -7095,9 +7094,7 @@ class Doar extends Component {
         
         
         <div className="row">
-          <div className="form-group">
-            <button className="btn btn-success" onClick={() => this.handleDonate()}> DOAR </button>
-          </div>
+          <button className="btn btn-success" onClick={() => this.handleDonate()}> DOAR </button>
         </div>
 
       </main>
