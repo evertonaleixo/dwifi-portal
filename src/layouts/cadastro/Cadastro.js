@@ -56,7 +56,7 @@ class Cadastro extends Component {
         <br/>
         <div className="row">
           <div className="col-xs-1 col-xs-offset-11">
-            <button className="btn btn-primary">Cadastrar</button>
+            <button className="btn btn-success">Cadastrar</button>
           </div>
         </div>
       </main>
