@@ -67,6 +67,15 @@ const usuarioReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_PEOPLE':
       return {state, ...action.payload}
+    case 'SELECT_PERSON':
+      let pessoas = state.pessoas.map(p => {
+        if (p.nome !== action.payload.nome) {
+          p.active = false
+        }else {
+          p.active = true
+        }})
+      state.pessoas = pessoas;
+      return { ...state }
     default:
       return state
   } 
